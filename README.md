@@ -1,4 +1,5 @@
-🩺 AI Doctor – Disease Prediction System
+🩺 AI Doctor – Disease Prediction System<br>
+
 📌 Overview
 
 AI Doctor is a machine learning-based web application that predicts possible diseases based on user-input symptoms. It provides quick and intelligent predictions using trained ML models and a user-friendly interface.
@@ -32,38 +33,9 @@ Machine Learning:
 NumPy
 Pandas
 Scikit-learn
-📂 Project Structure
-AI-Doctor/
-│
-├── static/                # CSS, JS, images
-├── templates/            # HTML files
-│   ├── index.html
-│   ├── login.html
-│   ├── signup.html
-│   ├── history.html
-│   └── ...
-│
-├── models/               # Trained ML model
-│   └── model.pkl
-│
-├── main.py               # Main Flask app
-├── models.py             # Database models
-├── users.db              # SQLite database
-├── requirements.txt      # Dependencies
-└── README.md
-⚙️ Installation & Setup
-1️⃣ Clone the repository
-git clone https://github.com/your-username/ai-doctor.git
-cd ai-doctor
-2️⃣ Create virtual environment
-python -m venv venv
-venv\Scripts\activate   # Windows
-3️⃣ Install dependencies
-pip install -r requirements.txt
-4️⃣ Run the application
-python main.py
-5️⃣ Open in browser
-http://127.0.0.1:5000/
+
+
+
 🧠 How It Works
 User enters symptoms in the web interface
 Symptoms are converted into a numerical vector
