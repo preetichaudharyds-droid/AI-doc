@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - HealthAI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2a6bc1;
+            --secondary: #3c8dbc;
+            --accent: #ff7e5f;
+            --light: #f8fafc;
+            --dark: #2d3748;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: var(--dark);
+            min-height: 100vh;
+        }
+        
+        h1, h2, h3, h4, h5, h6, .navbar-brand {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+        
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            padding: 0.5rem 1rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .navbar-brand {
+            color: var(--primary) !important;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        
+        .nav-link {
+            font-weight: 500;
+            transition: all 0.3s ease;
+            color: var(--dark) !important;
+            padding: 0.5rem 1rem !important;
+            border-radius: 8px;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary) !important;
+            background-color: rgba(42, 107, 193, 0.1);
+        }
+        
+        .about-hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 4rem 0;
+            margin-bottom: 3rem;
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 2.5rem 0;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span style="color: #2a6bc1;">Health</span><span style="color: #3c8dbc;">AI</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index"><i class="fas fa-home me-1"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html"><i class="fas fa-info-circle me-1"></i> About</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/developer"><i class="fas fa-code me-1"></i> Developer</a>
+                    </li>
+                
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="about-hero">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-3">About HealthAI</h1>
+            <p class="lead mb-4">Revolutionizing healthcare through artificial intelligence</p>
+        </div>
+    </div>
+
+    <!-- About Content -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="card shadow-sm border-0 mb-5">
+                    <div class="card-body p-5">
+                        <h2 class="text-center mb-4">Our Mission</h2>
+                        <p class="lead text-center mb-4">HealthAI is dedicated to making healthcare more accessible and accurate through the power of artificial intelligence. Our platform helps users understand potential health conditions based on their symptoms, providing valuable insights and recommendations.</p>
+                        
+                        <div class="row mt-5">
+                            <div class="col-md-6 mb-4">
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-brain"></i>
+                                    </div>
+                                    <h4>AI-Powered Diagnosis</h4>
+                                    <p>Our advanced machine learning algorithms analyze symptoms to identify potential health conditions with remarkable accuracy.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <h4>Privacy First</h4>
+                                    <p>We prioritize your privacy and data security. Your health information is always encrypted and protected.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-user-md"></i>
+                                    </div>
+                                    <h4>Professional Guidance</h4>
+                                    <p>While our AI provides insights, we always recommend consulting healthcare professionals for accurate diagnosis.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-rocket"></i>
+                                    </div>
+                                    <h4>Continuous Improvement</h4>
+                                    <p>Our system continuously learns from new data to improve accuracy and provide better health insights.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-5">
+                            <h3 class="text-center mb-4">How It Works</h3>
+                            <div class="row">
+                                <div class="col-md-4 mb-4">
+                                    <div class="text-center">
+                                        <div class="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                                            <i class="fas fa-comment-medical text-white fa-2x"></i>
+                                        </div>
+                                        <h5>1. Describe Symptoms</h5>
+                                        <p>Enter your symptoms through text or voice input</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="text-center">
+                                        <div class="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                                            <i class="fas fa-cogs text-white fa-2x"></i>
+                                        </div>
+                                        <h5>2. AI Analysis</h5>
+                                        <p>Our AI system processes your symptoms using advanced algorithms</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="text-center">
+                                        <div class="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                                            <i class="fas fa-chart-line text-white fa-2x"></i>
+                                        </div>
+                                        <h5>3. Get Results</h5>
+                                        <p>Receive detailed analysis, precautions, and recommendations</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-5">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h4>HealthAI</h4>
+                    <p class="text-muted">Intelligent health diagnosis powered by artificial intelligence</p>
+                    <p class="mb-0">&copy; 2023 Health Care Center. All rights reserved.</p>
+                    <p class="text-light mt-2"><small>This AI system is designed to provide health information and is not a substitute for professional medical advice.</small></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

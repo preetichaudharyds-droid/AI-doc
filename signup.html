@@ -1,0 +1,184 @@
+<!-- SIGNUP.HTML -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+
+    body{
+        min-height: 100vh;
+        overflow: hidden;
+        background: url('https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=1974&auto=format&fit=crop') no-repeat center center/cover;
+        position: relative;
+    }
+
+    body::before{
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.65);
+        backdrop-filter: blur(3px);
+        z-index: 0;
+    }
+
+    .signup-container{
+        position: relative;
+        z-index: 2;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-card{
+        width: 100%;
+        max-width: 470px;
+        background: rgba(255,255,255,0.08);
+        backdrop-filter: blur(18px);
+        border: 1px solid rgba(255,255,255,0.15);
+        border-radius: 25px;
+        padding: 40px;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        animation: floatCard 4s ease-in-out infinite;
+        transition: 0.4s;
+    }
+
+    .main-card:hover{
+        transform: scale(1.02);
+        box-shadow: 0 15px 50px rgba(0,0,0,0.6);
+    }
+
+    h2{
+        color: white;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    label{
+        color: white;
+        margin-bottom: 6px;
+        font-weight: 500;
+    }
+
+    .form-control{
+        background: rgba(255,255,255,0.12);
+        border: none;
+        color: white;
+        border-radius: 14px;
+        padding: 14px;
+        transition: 0.3s ease;
+    }
+
+    .form-control::placeholder{
+        color: #ddd;
+    }
+
+    .form-control:focus{
+        background: rgba(255,255,255,0.18);
+        box-shadow: 0 0 15px #ec4899;
+        border: 1px solid #ec4899;
+        color: white;
+    }
+
+    .btn-custom{
+        background: linear-gradient(45deg,#ec4899,#8b5cf6);
+        border: none;
+        padding: 13px;
+        border-radius: 14px;
+        font-weight: bold;
+        font-size: 17px;
+        transition: 0.4s ease;
+        letter-spacing: 1px;
+    }
+
+    .btn-custom:hover{
+        transform: translateY(-3px);
+        box-shadow: 0 0 20px rgba(236,72,153,0.7);
+        background: linear-gradient(45deg,#db2777,#7c3aed);
+    }
+
+    .bottom-text{
+        text-align: center;
+        margin-top: 18px;
+        color: white;
+    }
+
+    .bottom-text a{
+        color: #f472b6;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    .bottom-text a:hover{
+        color: white;
+    }
+
+    @keyframes floatCard{
+        0%{
+            transform: translateY(0px);
+        }
+        50%{
+            transform: translateY(-8px);
+        }
+        100%{
+            transform: translateY(0px);
+        }
+    }
+
+</style>
+
+<div class="signup-container">
+
+    <div class="main-card">
+
+        <h2>
+            Create Account
+        </h2>
+
+        <form method="POST">
+
+            <div class="mb-3">
+                <label>Username</label>
+                <input type="text"
+                       name="username"
+                       class="form-control"
+                       placeholder="Enter username"
+                       required>
+            </div>
+
+            <div class="mb-3">
+                <label>Email</label>
+                <input type="email"
+                       name="email"
+                       class="form-control"
+                       placeholder="Enter email"
+                       required>
+            </div>
+
+            <div class="mb-4">
+                <label>Password</label>
+                <input type="password"
+                       name="password"
+                       class="form-control"
+                       placeholder="Create password"
+                       required>
+            </div>
+
+            <button class="btn btn-primary btn-custom w-100">
+                Signup
+            </button>
+
+        </form>
+
+        <div class="bottom-text">
+            Already have an account?
+            <a href="/login">Login</a>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

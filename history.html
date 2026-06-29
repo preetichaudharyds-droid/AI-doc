@@ -1,0 +1,234 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+
+    .history-bg{
+
+        background-image: url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a5');
+
+        background-size: cover;
+
+        background-position: center;
+
+        background-repeat: no-repeat;
+
+        min-height: 100vh;
+
+        padding: 50px 0;
+
+        border-radius: 20px;
+
+    }
+
+    .history-card{
+
+        background: rgba(255,255,255,0.92);
+
+        backdrop-filter: blur(8px);
+
+        border-radius: 25px;
+
+        padding: 35px;
+
+        box-shadow: 0px 10px 30px rgba(0,0,0,0.2);
+
+        animation: fadeIn 1s ease;
+
+    }
+
+    .table{
+
+        border-radius: 15px;
+
+        overflow: hidden;
+
+    }
+
+    .table th{
+
+        background: #0d6efd;
+
+        color: white;
+
+        text-align: center;
+
+    }
+
+    .table td{
+
+        vertical-align: middle;
+
+        text-align: center;
+
+    }
+
+    .history-title{
+
+        font-weight: bold;
+
+        color: #0d6efd;
+
+    }
+
+    .btn-report{
+
+        border-radius: 10px;
+
+        font-weight: bold;
+
+        padding: 6px 14px;
+
+    }
+
+    .empty-box{
+
+        background: #f8f9fa;
+
+        padding: 40px;
+
+        border-radius: 20px;
+
+        text-align: center;
+
+    }
+
+    @keyframes fadeIn{
+
+        from{
+            opacity:0;
+            transform:translateY(20px);
+        }
+
+        to{
+            opacity:1;
+            transform:translateY(0px);
+        }
+
+    }
+
+</style>
+
+<div class="history-bg">
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-11">
+
+                <div class="history-card">
+
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+
+                        <h2 class="history-title">
+
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+
+                            Prediction History
+
+                        </h2>
+
+                        <a href="/index"
+                           class="btn btn-primary">
+
+                            <i class="fa-solid fa-house"></i>
+
+                            Dashboard
+
+                        </a>
+
+                    </div>
+
+                    {% if records %}
+
+                    <div class="table-responsive">
+
+                        <table class="table table-hover align-middle">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>Date</th>
+
+                                    <th>Symptoms</th>
+
+                                    <th>Disease</th>
+
+                                    
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                {% for item in records %}
+
+                                <tr>
+
+                                    <td>
+                                        {{ item.created_at }}
+                                    </td>
+
+                                    <td>
+                                        {{ item.symptoms }}
+                                    </td>
+
+                                    <td>
+
+                                        <span class="badge bg-success p-2">
+
+                                            {{ item.disease }}
+
+                                        </span>
+
+                                    </td>
+
+                                    
+
+                                </tr>
+
+                                {% endfor %}
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                    {% else %}
+
+                    <div class="empty-box">
+
+                        <h4 class="text-muted">
+
+                            <i class="fa-solid fa-notes-medical"></i>
+
+                            No Prediction History Found
+
+                        </h4>
+
+                        <p class="text-secondary">
+
+                            Your prediction history will appear here.
+
+                        </p>
+
+                    </div>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
